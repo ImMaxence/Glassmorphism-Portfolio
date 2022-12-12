@@ -262,6 +262,7 @@ a {
     margin: 0 30px 0 0;
     position: relative;
     opacity: 0.5;
+    transition: all 0.3s ease;
 }
 
 .about_tabs {
@@ -301,4 +302,70 @@ button {
     color: aliceblue;
     opacity: 1;
     cursor: auto;
+}
+
+.about_text .timeline_item {
+    margin-bottom: 30px;
+    position: relative;
+    padding: 10px 0 0 40px;
+}
+
+.about_text .timeline_item:last-child {
+    margin-bottom: 0;
+}
+
+.about_text .tabs_content {
+    padding: 40px 0;
+    display: none;
+}
+
+.about_text .timeline_item .date {
+    display: block;
+    color: #2B2E4A;
+    font-weight: 400;
+    margin: 0 0 10px;
+}
+
+.about_text .timeline_item h4 {
+    font-size: 18px;
+    text-transform: capitalize;
+    margin: 0 0 10px;
+}
+
+.about_text .timeline_item h4 span {
+    font-weight: 400;
+
+}
+
+.about_text .timeline {
+    position: relative;
+}
+
+.about_text .timeline::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    background-color: #2B2E4A;
+    top: 0;
+    left: 5px;
+}
+
+.about_text .timeline_item::before {
+    content: '';
+    position: absolute;
+    height: 11px;
+    width: 11px;
+    background-color: #2B2E4A;
+    left: 0;
+    top: 16px;
+    border-radius: 50%;
+}
+
+.about_text .tabs_content.active {
+    display: block;
+}
+
+.about_text .btn {
+    margin: 0 15px 15px 0;
 }
