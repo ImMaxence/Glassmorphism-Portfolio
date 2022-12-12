@@ -46,7 +46,7 @@ section {
 }
 
 .home_container {
-    background-color: violet;
+    width: 100%;
     padding: 0 40px;
 }
 
@@ -55,13 +55,9 @@ img {
     vertical-align: middle;
 }
 
-.home_text {
-    background-color: blue;
-}
+.home_text {}
 
-.home_img {
-    background-color: red;
-}
+.home_img {}
 
 .home_text,
 .home_img {
@@ -72,4 +68,25 @@ img {
 .row_container {
     display: flex;
     flex-wrap: wrap;
+}
+
+.align_center {
+    align-items: center;
+}
+
+.img_box {
+    max-width: 360px;
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    border: 8px solid rgba(255, 255, 255, 0.25);
+    margin: auto;
+}
+
+.img_box img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.home {
+    display: flex;
 }
