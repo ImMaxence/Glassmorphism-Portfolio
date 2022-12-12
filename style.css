@@ -256,4 +256,49 @@ a {
     text-transform: capitalize;
     display: inline-block;
     font-size: 20px;
+    color: aliceblue;
+    cursor: pointer;
+    font-weight: 500;
+    margin: 0 30px 0 0;
+    position: relative;
+    opacity: 0.5;
+}
+
+.about_tabs {
+    margin-top: 20px;
+}
+
+button {
+    font-family: inherit;
+    user-select: none;
+}
+
+.about_tabs .tabs_item:last-child {
+    margin: 0;
+}
+
+.about_tabs .tabs_item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 1px;
+    background-color: #2B2E4A;
+    transition: width 0.3s ease;
+}
+
+.about_tabs .tabs_item:hover::before {
+    width: 100%;
+}
+
+.about_tabs .tabs_item.active::before {
+    width: 100%;
+    background-color: #2B2E4A;
+}
+
+.about_tabs .tabs_item.active {
+    color: aliceblue;
+    opacity: 1;
+    cursor: auto;
 }
