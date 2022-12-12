@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -19,6 +21,8 @@ body {
     overflow-x: hidden;
     -webkit-tap-highlight-color: transparent;
     padding: 5vh 15px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
 }
 
 body::before {
@@ -55,10 +59,6 @@ img {
     vertical-align: middle;
 }
 
-.home_text {}
-
-.home_img {}
-
 .home_text,
 .home_img {
     width: 50%;
@@ -89,4 +89,19 @@ img {
 
 .home {
     display: flex;
+    padding: 120px 0;
+}
+
+.home_text p {
+    font-size: 18px;
+}
+
+.home_text h1 {
+    font-size: 50px;
+    text-transform: capitalize;
+}
+
+.home_text h2 {
+    font-size: 20px;
+    text-transform: capitalize;
 }
