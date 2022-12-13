@@ -16,14 +16,20 @@ function toggle_nav() {
 
 document.addEventListener("click", (event) => {
     if (event.target.classList.contains("link_item") && event.target.hash !== "") {
+        navbar.classList.add("hide");
         if (event.target.classList.contains("nav_item")) {
             toggle_nav();
+        }
+        else {
+            hide();
+            document.body.classList.add("hide_scroll");
         }
         setTimeout(() => {
             document.querySelector("section.active").classList.remove("active", "fade_out");
             document.querySelector(event.target.hash).classList.add("active");
             window.scrollTo(0, 0);
             document.body.classList.remove("hide_scroll");
+            navbar.classList.remove("hide");
         }, 500);
     }
 });
@@ -36,7 +42,6 @@ tabs.addEventListener("click", (event) => {
         tabs.querySelector(".active").classList.remove("active");
         event.target.classList.add("active");
         const target = event.target.getAttribute("data_target");
-        console.log(event.target.classList);
         aboutSec.querySelector(".tabs_content.active").classList.remove("active");
         aboutSec.querySelector(target).classList.add("active");
     }
