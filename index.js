@@ -12,3 +12,18 @@ tabs.addEventListener("click", (event) => {
         aboutSec.querySelector(target).classList.add("active");
     }
 });
+
+document.addEventListener("click", (event) => {
+    if (event.target.classList.contains("view_proj")) {
+        //console.log("test");
+        popup();
+    }
+})
+
+function popup() {
+    document.querySelector(".popup").classList.toggle("open");
+    document.body.classList.toggle("hide_scroll")
+    document.querySelector(".main").classList.toggle("fade_out");
+}
+
+document.querySelector(".pp_close").addEventListener("click", popup);
