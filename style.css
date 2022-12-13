@@ -45,6 +45,14 @@ body::before {
     transition: all 0.5s ease-in-out;
 }
 
+body.hide_scroll {
+    overflow-y: hidden;
+}
+
+.main.fade_out {
+    opacity: 0;
+}
+
 section {
     background-color: rgba(255, 255, 255, 0.25);
     border: 1px solid rgba(255, 255, 255, 0.40);
@@ -492,12 +500,4 @@ ul {
 .popup.open {
     visibility: visible;
     overflow-y: auto;
-}
-
-body.hide_scroll {
-    overflow-y: hidden;
-}
-
-.main.fade_out {
-    opacity: 0;
 }
