@@ -411,12 +411,13 @@ button {
     overflow-y: auto;
 }
 
-.pp_iner {
+.pp_inner {
     min-height: 100vh;
     padding: 40px 15px;
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 
 .pp_content {
@@ -427,4 +428,38 @@ button {
     width: 100%;
     border: 1px solid rgba(255, 255, 255, 0.40);
     backdrop-filter: blur(5px);
+}
+
+.pp_header {
+    position: relative;
+}
+
+.pp_header .btn {
+    height: 40px;
+    width: 40px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: -40px;
+    top: -40px;
+}
+
+.pp_thum img {
+    border-radius: 10px;
+}
+
+.pp_header h3 {
+    font-size: 25px;
+    text-transform: capitalize;
+    margin: 20px 0 15px;
+}
+
+.pp_body .description {
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
 }
