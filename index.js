@@ -21,8 +21,16 @@ function popup() {
 document.addEventListener("click", (event) => {
     if (event.target.classList.contains("view_proj")) {
         popup();
-        document.querySelector(".portfolio").scrollTo(0.0);
+        document.querySelector(".popup").scrollTo(0, 0);
         detail(event.target.parentElement);
+    }
+});
+
+document.querySelector(".pp_close").addEventListener("click", popup);
+
+document.addEventListener("click", (event) => {
+    if (event.target.classList.contains("pp_inner")) {
+        popup();
     }
 });
 
@@ -36,11 +44,3 @@ function detail(port_item) {
     document.querySelector(".pp_body").innerHTML =
         port_item.querySelector(".detail_proj").innerHTML;
 };
-
-document.querySelector(".pp_close").addEventListener("click", popup);
-
-document.addEventListener("click", (event) => {
-    if (event.target.classList.contains("pp_inner")) {
-        popup();
-    }
-});
