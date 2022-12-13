@@ -1,3 +1,33 @@
+const navbar = document.querySelector(".nav_toggle");
+
+navbar.addEventListener("click", () => {
+    hide();
+    toggle_nav();
+    document.body.classList.toggle("hide_scroll");
+});
+
+function hide() {
+    document.querySelector("section.active").classList.toggle("fade_out");
+}
+
+function toggle_nav() {
+    document.querySelector(".header").classList.toggle("active");
+}
+
+document.addEventListener("click", (event) => {
+    if (event.target.classList.contains("link_item") && event.target.hash !== "") {
+        if (event.target.classList.contains("nav_item")) {
+            toggle_nav();
+        }
+        setTimeout(() => {
+            document.querySelector("section.active").classList.remove("active", "fade_out");
+            document.querySelector(event.target.hash).classList.add("active");
+            window.scrollTo(0, 0);
+            document.body.classList.remove("hide_scroll");
+        }, 500);
+    }
+});
+
 const tabs = document.querySelector(".about_tabs");
 const aboutSec = document.querySelector(".about");
 
