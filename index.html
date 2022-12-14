@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maxence Bonnici</title>
+    <link rel="icon" href="media/m.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
@@ -13,7 +14,19 @@
 </head>
 
 <body>
-    <div class="main">
+    <div class="loader">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="circles">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="circle3"></div>
+        <div class="circle4"></div>
+    </div>
+    <div class="overlay"></div>
+    <div class="main hidden">
         <header class="header">
             <div class="home_container">
                 <div class="row_container flex_end">
@@ -33,7 +46,7 @@
                 </div>
             </div>
         </header>
-        <section class="home align_center active" id="home">
+        <section class="home align_center" id="home">
             <div class="home_container">
                 <div class="row_container align_center">
                     <div class="home_text">
@@ -65,23 +78,23 @@
                         </div>
                     </div>
                     <div class="about_text">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas atque blanditiis doloribus vitae
-                        enim asperiores nisi, voluptatem tenetur quia facilis, natus fugit quis debitis ipsam iusto
-                        doloremque libero aliquid perferendis cupiditate suscipit, illo eligendi molestias! Mollitia
-                        cumque sit, atque rem ducimus ullam quis accusantium nesciunt commodi libero perferendis,
-                        praesentium doloremque.
+                        Hi ! My name is Maxence and I am a young developer of 20 years old. I was in a public high
+                        school in section technology option SIN I did an HND at that same school and I got a BAC+2 And
+                        now Im
+                        in Epitech ! I am looking for an alternation on Aix
+                        or Marseille !
                         <h3>Skills</h3>
                         <div class="skills">
-                            <div class="skill_item">dddd</div>
-                            <div class="skill_item">dddd</div>
-                            <div class="skill_item">dddd</div>
-                            <div class="skill_item">dddd</div>
-                            <div class="skill_item">dddd</div>
-                            <div class="skill_item">dddd</div>
-                            <div class="skill_item">dddd</div>
-                            <div class="skill_item">dddd</div>
-                            <div class="skill_item">dddd</div>
-                            <div class="skill_item">dddd</div>
+                            <div class="skill_item">HTML</div>
+                            <div class="skill_item">CSS</div>
+                            <div class="skill_item">JavaScript</div>
+                            <div class="skill_item">Python</div>
+                            <div class="skill_item">Php</div>
+                            <div class="skill_item">C</div>
+                            <div class="skill_item">C++</div>
+                            <div class="skill_item">Bootstrap</div>
+                            <div class="skill_item">ReactJs</div>
+                            <div class="skill_item">Java</div>
                         </div>
                         <div class="about_tabs">
                             <button type="button" class="tabs_item active" data_target="#studies">Studies</button>
@@ -90,50 +103,34 @@
                         <div class="tabs_content active" id="studies">
                             <div class="timeline">
                                 <div class="timeline_item">
-                                    <span class="date">2222 - 2222</span>
-                                    <h4>back back back back back - <span>scholl scholl scholl</span></h4>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore recusandae
-                                        dolorem, voluptas unde eius ipsum!</p>
+                                    <span class="date">2022 - 2025</span>
+                                    <h4>MSc Pro Software Architect, Application Developer - <span>Epitech</span></h4>
+                                    <p>At the end of the training I will graduate in Architect
+                                        software, application developer.
+                                        I chose the Big Data and AI options.</p>
                                 </div>
                                 <div class="timeline_item">
-                                    <span class="date">2222 - 2222</span>
-                                    <h4>back back back back back - <span>scholl scholl scholl</span></h4>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore recusandae
-                                        dolorem, voluptas unde eius ipsum!</p>
+                                    <span class="date">2020 - 2022</span>
+                                    <h4>HND Digital System - <span>Marie Madeleine FOURCADE</span></h4>
+                                    <p>Obtaining a HND SN OPTION Digital and
+                                        Network.</p>
                                 </div>
                                 <div class="timeline_item">
-                                    <span class="date">2222 - 2222</span>
-                                    <h4>back back back back back - <span>scholl scholl scholl</span></h4>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore recusandae
-                                        dolorem, voluptas unde eius ipsum!</p>
+                                    <span class="date">2017 - 2020</span>
+                                    <h4>Baccalaureate Technology - <span>Marie Madeleine FOURCADE</span></h4>
+                                    <p>Obtaining the BAC OPTION System
+                                        Information and Digital.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="tabs_content" id="experiences">
                             <div class="timeline">
                                 <div class="timeline_item">
-                                    <span class="date">1111 - 1111</span>
-                                    <h4>web web web - <span>google tkt</span></h4>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam doloremque nobis
-                                        non vero, nihil quae.</p>
-                                </div>
-                                <div class="timeline_item">
-                                    <span class="date">1111 - 1111</span>
-                                    <h4>web web web - <span>google tkt</span></h4>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam doloremque nobis
-                                        non vero, nihil quae.</p>
-                                </div>
-                                <div class="timeline_item">
-                                    <span class="date">1111 - 1111</span>
-                                    <h4>web web web - <span>google tkt</span></h4>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam doloremque nobis
-                                        non vero, nihil quae.</p>
-                                </div>
-                                <div class="timeline_item">
-                                    <span class="date">1111 - 1111</span>
-                                    <h4>web web web - <span>google tkt</span></h4>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam doloremque nobis
-                                        non vero, nihil quae.</p>
+                                    <span class="date">May 2021 - July 2021</span>
+                                    <h4>Developer
+                                        full-stack - <span>Kortex Consulting</span></h4>
+                                    <p>Creation of a program to manage
+                                        a mailbox in C language.</p>
                                 </div>
                             </div>
                         </div>
@@ -153,63 +150,72 @@
                 <div class="row_container">
                     <div class="portfolio_item">
                         <div class="portfolio_thumb">
-                            <img src="media/me1c.png" alt="recent work 1">
+                            <img src="media/dashboard.png" alt="recent work 1">
                         </div>
-                        <h3 class="port_title">Recent work 1</h3>
+                        <h3 class="port_title">Dashboard with widgets</h3>
                         <button type="button" class="btn view_proj">View project</button>
                         <div class="detail_proj">
                             <div class="description">
-                                <p>Lorem ipsum dolo</p>
+                                <p>This project’s goal was to make a dashboard with widgets. This is one of the first
+                                    projects I did in React JS, the backend is in SpringBoot its new for me</p>
                             </div>
                             <div class="general_info">
                                 <ul>
-                                    <li>Info 1 - <span>info 1 dec</span></li>
-                                    <li>Info 1 - <span>info 1 dec</span></li>
-                                    <li>Info 1 - <span>info 1 dec</span></li>
-                                    <li>Info 1 - <span><a href="" target="_blank">google.com</a></span></li>
+                                    <li>Created - <span>November 2022</span></li>
+                                    <li>Technologies Used - <span>React JS, Java SpringBoot</span></li>
+                                    <li>Role - <span>Frontend</span></li>
+                                    <li>View online - <span><a
+                                                href="https://github.com/ImMaxence/Custom-Dashboard-with-Widgets"
+                                                target="_blank">the project</a></span></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div class="portfolio_item">
                         <div class="portfolio_thumb">
-                            <img src="media/me1a.png" alt="recent work 1">
+                            <img src="media/code4marseille.png" alt="recent work 2">
                         </div>
-                        <h3 class="port_title">Recent work 2</h3>
+                        <h3 class="port_title">Hackaton code4marseille</h3>
                         <button type="button" class="btn view_proj">View project</button>
                         <div class="detail_proj">
                             <div class="description">
-                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum tempore, doloribus
-                                    omnis quisquam delectus porro iusto voluptatum corporis, accusantium amet possimus,
-                                    blanditiis inventore doloremque reiciendis dolorum. Est sunt totam quia ipsum quae
-                                    accusamus eaque obcaecati, quaerat, porro voluptas nostrum iusto?</p>
+                                <p>This project was carried out during the hackaton organized this year by Voyage
+                                    Privée. The subject of the event was the 2024 Olympics and in the Olympics, you
+                                    should know that there are ~10,500 athletes. The purpose of this project is to sort
+                                    the athletes by their name, their sport...
+                                </p>
                             </div>
                             <div class="general_info">
                                 <ul>
-                                    <li>Info 2 - <span>info 1 dec</span></li>
-                                    <li>Info 2 - <span>info 1 dec</span></li>
-                                    <li>Info 2 - <span>info 1 dec</span></li>
-                                    <li>Info 2 - <span><a href="" target="_blank">google.com</a></span></li>
+                                    <li>Created - <span>November 2022</span></li>
+                                    <li>Technologies Used - <span>React JS, Symfony</span></li>
+                                    <li>Role - <span>Frontend</span></li>
+                                    <li>View online - <span><a
+                                                href="https://github.com/ImMaxence/Hackaton-code4marseille"
+                                                target="_blank">the project</a></span></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div class="portfolio_item">
                         <div class="portfolio_thumb">
-                            <img src="media/me1b.png" alt="recent work 1">
+                            <img src="media/joboard.png" alt="recent work 3">
                         </div>
-                        <h3 class="port_title">Recent work 3</h3>
+                        <h3 class="port_title">Job Board</h3>
                         <button type="button" class="btn view_proj">View project</button>
                         <div class="detail_proj">
                             <div class="description">
-                                <p>333333333333333333333333333orro voluptas nostrum iusto?</p>
+                                <p>The purpose of this project was to make a platform for applying for a job. It was the
+                                    first project where I discovered Bootstrap, React JS and NodeJS</p>
                             </div>
                             <div class="general_info">
                                 <ul>
-                                    <li>Info 3 - <span>info 1 dec</span></li>
-                                    <li>Info 3 - <span>info 1 dec</span></li>
-                                    <li>Info 3 - <span>info 1 dec</span></li>
-                                    <li>Info 1 - <span><a href="" target="_blank">google.com</a></span></li>
+                                    <li>Created - <span>October 2022</span></li>
+                                    <li>Technologies Used - <span>React JS, Bootstrap, NodeJs</span></li>
+                                    <li>Role - <span>Frontend, Backend</span></li>
+                                    <li>View online - <span><a
+                                                href="https://github.com/ImMaxence/Scholl-Project-Job-Board"
+                                                target="_blank">the project</a></span></li>
                                 </ul>
                             </div>
                         </div>
@@ -246,19 +252,20 @@
                 </div>
                 <div class="row_container">
                     <div class="form">
-                        <form>
+                        <form action="https://formsubmit.co/6b3916172950db140aa36d01f5434be9" method="POST">
                             <div class="row_container">
                                 <div class="group">
-                                    <input type="text" placeholder="Name" class="input_control" required>
+                                    <input name="Name" type="text" placeholder="Name" class="input_control" required>
                                 </div>
                                 <div class="group">
-                                    <input type="text" placeholder="Email" class="input_control" required>
+                                    <input name="Email" type="email" placeholder="Email" class="input_control" required>
                                 </div>
                                 <div class="group">
-                                    <input type="text" placeholder="Subject" class="input_control" required>
+                                    <input name="Subject" type="text" placeholder="Subject" class="input_control"
+                                        required>
                                 </div>
                                 <div class="group">
-                                    <textarea placeholder="Message" class="input_control"></textarea>
+                                    <textarea name="Message" placeholder="Message" class="input_control"></textarea>
                                 </div>
                                 <div class="submit">
                                     <button type="submit" class="btn">Send message</button>
@@ -269,18 +276,20 @@
                     <div class="info">
                         <div class="info_item">
                             <h3>Email</h3>
-                            <p>example@gmail.com</p>
+                            <p>maxence.bonnici@epitech.eu</p>
                         </div>
                         <div class="info_item">
                             <h3>Phone</h3>
-                            <p>5555555555</p>
+                            <p>+33 6 71 91 02 14</p>
                         </div>
                         <div class="info_item">
                             <h3>Follow me</h3>
                             <div class="social">
-                                <a href="" target="_blank"><i class="fab fa-instagram"></i></a>
-                                <a href="" target="_blank"><i class="fab fa-github"></i></a>
-                                <a href="" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://www.instagram.com/max.bnici/?next=%2F" target="_blank"><i
+                                        class="fab fa-instagram"></i></a>
+                                <a href="https://github.com/ImMaxence" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="https://www.linkedin.com/in/maxence-bonnici-77b540250/" target="_blank"><i
+                                        class="fab fa-linkedin"></i></a>
                             </div>
                         </div>
                     </div>

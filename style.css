@@ -5,6 +5,7 @@
     margin: 0;
     box-sizing: border-box;
     outline: none;
+    scroll-behavior: smooth;
 }
 
 ::before,
@@ -183,9 +184,10 @@ a {
 }
 
 ::-webkit-scrollbar {
-    width: 8px;
+    display: none;
 }
 
+/*
 ::-webkit-scrollbar-track {
     background-color: #53354A;
 }
@@ -193,7 +195,7 @@ a {
 ::-webkit-scrollbar-thumb {
     background-color: #E84545;
     border-radius: 10px;
-}
+}*/
 
 .hidden {
     display: none !important;
@@ -763,10 +765,243 @@ section.fade_out {
 .header.active {
     position: fixed;
     top: 35px;
-    padding: 20px 15px;
+    padding: 0px 15px;
+    /*bug here*/
 }
 
 .header.active .home_container {
     max-width: 1200px;
     margin: auto;
+}
+
+.overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 20;
+    background-color: transparent;
+    visibility: hidden;
+}
+
+.overlay.active {
+    visibility: visible;
+}
+
+.circles {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    max-width: 1200px;
+    width: calc(100% - 30px);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.circles div {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.circles .circle1 {
+    height: 60px;
+    width: 60px;
+    background-color: #2B2E4A;
+    left: 5%;
+    top: 10%;
+    opacity: 0.4;
+    animation: zoomInOut 6s ease-in-out infinite;
+}
+
+@keyframes zoomInOut {
+
+    0%,
+    100% {
+        transform: scale(0.5);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+}
+
+.circles .circle2 {
+    height: 80px;
+    width: 80px;
+    background-color: aliceblue;
+    left: 30%;
+    top: 50%;
+    opacity: 0.4;
+    animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(-50px);
+    }
+
+    50% {
+        transform: translateY(0px);
+    }
+}
+
+.circles .circle3 {
+    height: 120px;
+    width: 120px;
+    background-color: #E84545;
+    top: 40%;
+    opacity: 0.6;
+    right: -60px;
+}
+
+.circles .circle4 {
+    height: 50px;
+    width: 50px;
+    background-color: #2B2E4A;
+    top: 80%;
+    left: -30px;
+    opacity: 0.6;
+}
+
+@media(max-width:991px) {
+    .home_container {
+        padding: 0;
+    }
+
+    .home_text,
+    .home_img {
+        width: 100%;
+    }
+
+    .home_text {
+        text-align: center;
+    }
+
+    .home_img {
+        order: -1;
+    }
+
+    .home_img .img_box {
+        max-width: 300px;
+    }
+
+    .home_text .btn {
+        margin: 0 7px 15px;
+    }
+
+    .portfolio_item {
+        width: calc(50% -30px);
+    }
+}
+
+@media(max-width:767px) {
+
+    .about_text,
+    .about_img,
+    .form,
+    .info {
+        width: 100%;
+    }
+
+    .about_text {
+        margin-top: 30px;
+    }
+
+    .portfolio_item {
+        width: calc(100% -30px);
+    }
+
+    .pp_inner {
+        padding: 30px 15px;
+    }
+
+    .info {
+        order: -1;
+        margin-bottom: 15px;
+    }
+
+    .info_item {
+        padding: 0;
+    }
+}
+
+@media(max-width:575px) {
+
+    .title h2,
+    .header .nav_inner ul li a {
+        font-size: 35px;
+    }
+
+    .home_text h1 {
+        font-size: 30px;
+    }
+
+    .home_text h2 {
+        font-size: 18px;
+    }
+
+    .pp_header h3 {
+        font-size: 20px;
+    }
+}
+
+.loader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 30;
+    background-color: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.6s ease;
+}
+
+.loader.fade_out {
+    opacity: 0;
+}
+
+.loader div {
+    border: 2px solid transparent;
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.6;
+    border-top-color: transparent !important;
+    border-bottom-color: transparent !important;
+    animation: spin 1s linear infinite;
+}
+
+.loader div:nth-child(1) {
+    height: 60px;
+    width: 60px;
+    border-color: #2B2E4A;
+}
+
+.loader div:nth-child(2) {
+    height: 45px;
+    width: 45px;
+    border-color: aliceblue;
+    animation-duration: 1.2s;
+}
+
+.loader div:nth-child(3) {
+    height: 30px;
+    width: 30px;
+    border-color: #E84545;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
